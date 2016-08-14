@@ -1,0 +1,24 @@
+{
+  "name": "nested-value",
+  "description": "Similar to get value from nested object",
+  "version": "0.1.0",
+  "author": {
+    "name": "addhome2001",
+    "url": "https://github.com/addhome2001"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/addhome2001/nested-value.git"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.2.2"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -w"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
