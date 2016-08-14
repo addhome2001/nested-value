@@ -14,7 +14,7 @@ ___Require nested-values___
 const nestedValue = require('nested-value');
 ```
 
-___You can get a nested property from an object:___
+___You can get nested value from an object:___
 
 ```js
 const nestObj =  { a: { b: { c: "i'm here" } } };
@@ -24,7 +24,7 @@ const newObject = nestedValue('a.b.c'); //=> "i'm here"
 const newObject = nestedValue(['a','b','c']); //=> "i'm here"
 ```
 
-___Also you can pass a callback:___
+___You can also pass a callback:___
 ```js
 const nestObj =  { a: { b: { c: "i'm here" } } };
 
