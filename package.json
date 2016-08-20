@@ -15,7 +15,8 @@
     "node": ">=4.2.2"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha -w"
+    "test:watch": "./node_modules/.bin/mocha -w",
+    "test": "./node_modules/.bin/mocha"
   },
   "devDependencies": {
     "chai": "^3.5.0",
