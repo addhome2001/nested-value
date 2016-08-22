@@ -2,7 +2,7 @@
 
 > Get the value from nested object
 
-[![Build Status](https://travis-ci.org/emn178/js-md5.svg?branch=master)](https://travis-ci.org/emn178/js-md5)
+[![Build Status](https://travis-ci.org/addhome2001/nested-value.svg?branch=master)](https://travis-ci.org/addhome2001/nested-value)
 
 ## Install
 ```
