@@ -26,16 +26,16 @@ ___You can get nested value from an object:___
 ```js
 const nestObj =  { a: { b: { c: "i'm here" } } };
 
-const newObject = nestedValue('a.b.c'); //=> "i'm here"
+const newObject = nestedValue(nestObj, 'a.b.c'); //=> "i'm here"
 //or
-const newObject = nestedValue(['a','b','c']); //=> "i'm here"
+const newObject = nestedValue(nestObj, ['a','b','c']); //=> "i'm here"
 ```
 
 ___You can also pass a callback:___
 ```js
 const nestObj =  { a: { b: { c: "i'm here" } } };
 
-const newObject = nestedValue('a.b.c', function (val){
+const newObject = nestedValue(nestObj, 'a.b.c', function (val){
     return { foo: val }
 }); //=> { foo: "i'm here" }
 
