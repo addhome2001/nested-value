@@ -1,7 +1,7 @@
 {
   "name": "nested-value",
-  "description": "Similar to get value from nested object",
-  "version": "1.0.3",
+  "description": "Get value from nested object",
+  "version": "1.0.4",
   "author": {
     "name": "addhome2001",
     "url": "https://github.com/addhome2001"
@@ -16,18 +16,23 @@
     "node": ">=4.2.2"
   },
   "keywords": [
-      "nested",
-      "value",
-      "object",
-			"get-nested",
-			"nested-value"
+    "nested",
+    "value",
+    "object",
+    "get-nested",
+    "nested-value"
   ],
   "scripts": {
     "test:watch": "./node_modules/.bin/mocha -w",
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha",
+    "lint": "./node_modules/.bin/eslint . --ignore-path .gitignore"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.0.2"
+  },
+  "dependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.0.1"
   }
 }
