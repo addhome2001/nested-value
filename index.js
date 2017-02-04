@@ -5,22 +5,23 @@
  * Licensed under the MIT License
  */
 
-'use strict';
-
 module.exports = function (obj, goal, cb) {
-    if(goal.length){
-        var goalArr = Array.isArray(goal) ? goal : goal.split('.');
-        var result = obj[goalArr[0]],
-            init = 1,
-            length = goalArr.length;
+  var goalArr;
+  var result;
+  var init;
+  var length;
 
-        for( init ; init < length ; init++){
-            result = result[goalArr[init]]
-        }
+  if (goal.length) {
+    goalArr = Array.isArray(goal) ? goal : goal.split('.');
+    result = obj[goalArr[0]];
+    init = 1;
+    length = goalArr.length;
 
-        return cb ? cb(result) : result
-
-    } else {
-        throw new TypeError('The second argument is not Array or String.')
+    for (init; init < length; init++) {
+      result = result[goalArr[init]];
     }
+  } else {
+    throw new TypeError('The second argument is not Array or String.');
+  }
+  return cb ? cb(result) : result;
 };
