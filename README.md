@@ -4,6 +4,7 @@
 
 [![Build Status](https://travis-ci.org/addhome2001/nested-value.svg?branch=master)](https://travis-ci.org/addhome2001/nested-value)
 [![Known Vulnerabilities](https://snyk.io/test/github/addhome2001/nested-value/badge.svg)](https://snyk.io/test/github/addhome2001/nested-value)
+
 ## Install
 ```
 npm install nested-value
