@@ -1,7 +1,7 @@
 {
   "name": "nested-value",
   "description": "Get value from nested object",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": {
     "name": "addhome2001",
     "url": "https://github.com/addhome2001"

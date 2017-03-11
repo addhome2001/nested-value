@@ -5,23 +5,38 @@
  * Licensed under the MIT License
  */
 
+/**
+ * @param  {Object}         obj  [source]
+ * @param  {Array|String}   goal [structure]
+ * @param  {Function}       cb   [callback]
+ * @return {*}                   [result]
+ */
 module.exports = function (obj, goal, cb) {
   var goalArr;
   var result;
   var init;
   var length;
 
-  if (goal.length) {
-    goalArr = Array.isArray(goal) ? goal : goal.split('.');
+  switch (Object.prototype.toString.call(goal)) {
+    case '[object Array]':
+      goalArr = goal;
+      break;
+    case '[object String]':
+      goalArr = goal.split('.');
+      break;
+    default:
+      throw new TypeError('The second arguments is not Array or String.');
+  }
+
+  length = goalArr.length;
+
+  if (length > 0) {
     result = obj[goalArr[0]];
     init = 1;
-    length = goalArr.length;
 
     for (init; init < length; init++) {
       result = result[goalArr[init]];
     }
-  } else {
-    throw new TypeError('The second argument is not Array or String.');
   }
   return cb ? cb(result) : result;
 };

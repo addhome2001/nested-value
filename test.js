@@ -75,6 +75,6 @@ describe('nested-values', function () {
       nested(defaultObj, 123);
     };
 
-    expect(actual).to.throw(TypeError, /The second argument is not Array or String./);
+    expect(actual).to.throw(TypeError, /The second arguments is not Array or String./);
   });
 });
