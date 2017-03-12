@@ -47,6 +47,22 @@ describe('nested-values', function () {
     expect(actual).to.eql(exp);
   });
 
+  it('should get the value inside array', function () {
+    var nestObj = ['a', 'b', { c: 'ValueC' }];
+    var exp = 'ValueC';
+    var actual = nested(nestObj, [2, 'c']);
+
+    expect(actual).to.eql(exp);
+  });
+
+  it('should get the value inside nested array', function () {
+    var nestObj = [[['a'], { b: 'valueB', c: [{ d: 'valueD' }] }]];
+    var exp = 'valueD';
+    var actual = nested(nestObj, '0.1.c.0.d');
+
+    expect(actual).to.eql(exp);
+  });
+
   it('callback should get the new value', function () {
     var nestObj = { a: { b: { c: "i'm here" } } };
     var exp = { newProperty: "i'm here" };

@@ -27,9 +27,16 @@ ___You can get nested value from an object:___
 ```js
 const nestObj =  { a: { b: { c: "i'm here" } } };
 
-const newObject = nestedValue(nestObj, 'a.b.c'); //=> "i'm here"
+const nestedValue = nestedValue(nestObj, 'a.b.c'); //=> "i'm here"
 //or
-const newObject = nestedValue(nestObj, ['a','b','c']); //=> "i'm here"
+const nestedValue = nestedValue(nestObj, ['a','b','c']); //=> "i'm here"
+```
+
+___Or value inside an nested array___
+```js
+const nestArray = [[['a'], { b: 'valueB', c: [{ d: 'valueD' }] }]];
+const nestedValue = nestedValue(nestArray, '0.1.c.0.d');
+// => "valueD"
 ```
 
 ___You can also pass a callback:___
@@ -38,7 +45,8 @@ const nestObj =  { a: { b: { c: "i'm here" } } };
 
 const newObject = nestedValue(nestObj, 'a.b.c', function (val){
     return { foo: val }
-}); //=> { foo: "i'm here" }
+});
+//=> { foo: "i'm here" }
 
 ```
 
@@ -57,7 +65,7 @@ Source object to get nested value.
 Type: `array` or `string`
 
 - String: separating property by '.' -> `"foo.bar.foo"`
-- Array: fill property in normal array -> `["foo", "bar", "foo"]`
+- Array: fill property in normal array -> `[0, "bar", 1]`
 
 #### [callback]
 

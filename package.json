@@ -1,7 +1,7 @@
 {
   "name": "nested-value",
   "description": "Get value from nested object",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": {
     "name": "addhome2001",
     "url": "https://github.com/addhome2001"
@@ -25,7 +25,8 @@
   "scripts": {
     "test:watch": "./node_modules/.bin/mocha -w",
     "test": "./node_modules/.bin/mocha",
-    "lint": "./node_modules/.bin/eslint . --ignore-path .gitignore"
+    "lint": "./node_modules/.bin/eslint . --ignore-path .gitignore",
+    "validate": "npm run lint && npm test"
   },
   "devDependencies": {
     "chai": "^3.5.0",
